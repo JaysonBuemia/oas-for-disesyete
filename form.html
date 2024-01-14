@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Appointment Form</title>
+    <style>
+        
+        h2{
+            color: black;
+            font-weight: 100;
+            font-size: 4vh;
+            margin-left: 15px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: yellowgreen;
+        }
+
+        .container {
+            width: 300px;
+            padding: 16px;
+            background-color: rgb(11, 187, 11);
+            margin: 0 auto;
+            margin-top: 100px;
+            border: 1px solid black;
+            border-radius: 4px;
+            position: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type=text], input[type=email], input[type=password], input[type=options]{
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #000000;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            background-color: #30ccdd;
+            color: rgb(12, 4, 4);
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        input[type=submit]:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+ <h2>Fill-out for Application</h2>
+
+    <form action="phform.php" method="POST">
+        <label for="fname">First Name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last Name:</label><br>
+        <input type="text" id="lname" name="lname"><br>
+        <label for="age">Age:</label><br>
+        <input type="text" id="age" name="age"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+		<label for="address">Address:</label><br>
+        <input type="text" id="address" name="address"><br>
+		<label for="contact">Contacts:</label><br>
+        <input type="text" id="contact" name="contact"><br>
+        <label for="options">Application</label><br>
+        <input class="options" list="options" type="options" name="options">
+        <datalist id="options">
+            <option value="Barangay Certificate">
+            <option value="Barangay Indigecy">
+            <option value="Barangay Clearance">
+            </datalist><br>
+        <label for="date">Date:</label><br>
+        <input type="date" id="date" name="date"><br>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+</body>
+</html>
